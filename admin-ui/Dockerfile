@@ -27,6 +27,6 @@ COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
 # Copy from the stahg 1
 COPY --from=builder /admin-ui/out /usr/share/nginx/html
 
-EXPOSE 3000 
+EXPOSE 3000 80
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
